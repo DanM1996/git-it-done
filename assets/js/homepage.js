@@ -3,6 +3,7 @@ var nameInputEl = document.querySelector("#username");
 var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
 var languageButtonsEl = document.querySelector("#language-buttons");
+var language = "";
 
 var formSubmitHandler = function(event) {
     // prevent page from refreshing
@@ -23,7 +24,7 @@ var formSubmitHandler = function(event) {
 };
 
 var buttonClickHandler = function(event){
-    var language = event.target.getAttribute("data-language");
+    language = event.target.getAttribute("data-language");
    
     if (language) {
         getFeaturedRepos(language);
